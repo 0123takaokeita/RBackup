@@ -4,8 +4,7 @@ require "./setting.rb"
 
 permalink = File.dirname(Dir.pwd)
 current_file_name = File.basename(permalink)
-output_file_path = "#{Dir.pwd}/zip/#{current_file_name}_#{$date}.zip"
-output_file_name = "${current_file_name}_#{$day}.zip"
+output_file_path = "#{Dir.pwd}/zip/#{current_file_name}_#{$day}.zip"
 cmd = "cd #{permalink} ; zip -r #{output_file_path} . -x #{$no_zip}"
 zip_dir_array = Dir.glob("#{Dir.pwd}/zip/*")
 
